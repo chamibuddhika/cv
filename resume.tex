@@ -1,0 +1,196 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Buddhika Chamith}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\NewEntry{email}{\href{mailto:chamibuddhika@gmail.com}{chamibuddhika@gmail.com}} % Email address
+
+\NewEntry{website}{\href{http://homes.soic.indiana.edu/budkahaw/}{http://homes.soic.indiana.edu/budkahaw/}} % Personal website
+
+\NewEntry{phone}{+1 (317) 909 1713} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{1em}
+
+% \NewEntry{2013-2016}{Indiana University, Bloomington}
+
+% \Description{\MarginText{MS \\ Computer Science}GPA: 3.85\ \ $\cdotp$\ \ \textit{Minor}: Programming Languages\newline 
+% Course Work: Advanced Operating Systems, Advanced Database Systems, Programming Language Implementation, Programming Language Foundations
+
+%------------------------------------------------
+
+\NewEntry{2016-Current}{Indiana University, Bloomington}
+
+\Description{\MarginText{PhD \\ Computer Science}\textit{Minor}: Programming Languages \newline
+\textit{Research}: Work on lightweight runtime binary instrumentation techniques.}
+
+
+%------------------------------------------------
+
+\NewEntry{2013-2016}{Indiana University, Bloomington}
+
+\Description{\MarginText{MS \\ Computer Science}\textit{GPA}: 3.85 \newline
+\textit{Selected Course Work}: Advanced Operating Systems, Advanced Database Systems, Programming Language Implementation, Programming Language Foundations, 
+Theory of Computing, Machine Learning}
+
+%------------------------------------------------
+
+\NewEntry{2006-2010}{University of Moratuwa, Sri Lanka}
+
+\Description{\MarginText{BSc. \\ Computer Science}\textit{GPA}: 3.91 (out of 4.2) \newline
+First Class Honors}
+
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+\NewEntry{2014--Present}{Research Assistant, \textsc{Indiana University}}
+
+\Description{\MarginText{Center for Research in Extreme Scale Technologies}\begin{itemize}
+  \item Developed Liteprof, a lightweight runtime binary instrumentation framework for x86. 
+This work is published in PLDI'16 and PLDI'17.
+  \item Contributed to Gibbon research compiler which operates on packed memory representations
+of ASTs to yield performance gains. This work will be published in ECOOP'17. 
+  \item Developed a non‐blocking I/O library and related benchmarks on top of Concurrent Cilk work‐stealing
+parallel runtime research prototype. The related work was published in LCPC'15.
+  \item Integrated HPX, a C based asynchronous many task runtime as a Haberno CnC backend target. This
+work entailed generating HPX C code from the CnC DSL specification using a Python template library.
+\end{itemize}
+}
+
+%------------------------------------------------
+
+\NewEntry{2010--2013}{Software Engineer, \textsc{WSO2 Inc}  --- Colombo}
+
+\Description{\MarginText{WSO2 Inc}\begin{itemize}
+  \item Software developer in Business Activity Monitoring team. Was involved in a complete rewrite of the product in order to make it scalable to handle high throughput data ingestion and big data analytics.
+  \item Implemented a secondary indexing scheme on Apache Cassandra and a high throughput message ingestion service using Apache Thrift.
+  \item Integrated Apache Hive to a cloud based multi‐tenanted environment including source level changes within
+Hive to make it multi‐tenant aware.
+\end{itemize}}
+
+%------------------------------------------------
+
+\NewEntry{2008, 2009}{Student Developer, \textsc{Google Summer of Code}}
+
+\Description{\MarginText{GSoC} \begin{itemize}
+  \item Apache Tomcat : Improved Tomcat JMX infrastructure making it possible to fully configure a Tomcat instance over JMX.
+  \item Apache ODE : Integrated ODE based BPEL workflow support to BPELUnit. BPELUnit is an Eclipse based unit testing framework for BPEL processes.
+\end{itemize}}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS 
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Projects (Reverse Chronological)}\vspace{1em}
+
+\Description{\MarginText{Liteprof}A lightweight binary instrumentation framework for x86-64.}
+\Description{\MarginText{Haberno CNC/HPX}Integrated HPX distributed task execution enviornment as a CNC backend target. {\href{http://homes.soic.indiana.edu/budkahaw/CNC_HPX_PRINTED_SC15.pdf}{Poster}}}
+\Description{\MarginText{Concurrent Cilk}A research prototype based on Intel Cilk with better support for blocking concurrency by promoting blocking lightweight threads to full OS threads.}
+\Description{\MarginText{WSO2 Data Analytics Server}A data analytics and monitoring solution for enterprise middleware infrastructures. Contributed to the data analytics layer by integrating various big data solutions to the product.}
+\Description{\MarginText{DSync}A distributed synchronization library based on Apache Zookeeper. {\href{https://chamibuddhika.wordpress.com/2011/08/29/dsync-a-distributed-synchronization-and-coordination-library/}{Blog}}}
+\Description{\MarginText{Apache Tomcat}Improving Tomcat JMX infrastructure. {\href{https://blogs.apache.org/tomcat/entry/tomcat_7_trunk_and_jmx}{Blog}}}
+\Description{\MarginText{BPELUnit}BPELUnit is a unit testing framework for BPEL processes. Integrated Apache ODE as a runtime backend for the BPELUnit Eclipse plugin (tutorials at {\href{http://www.se.uni-hannover.de/pages/en:tutorials_bpelunit_coverage_part_1}{[1]}} \& {\href{http://www.se.uni-hannover.de/pages/en:tutorials_bpelunit_coverage_part_2}{[2]}}).}
+
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PROFICIENCIES 
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Proficiencies}\vspace{1em}
+
+\Description{\MarginText{Programming Languages}C, C++, Java, Python, x86 Assembly, Racket, Haskell}
+
+\vspace{1em}
+
+\Description{\MarginText{Technologies}SOAP web services, REST, OSGi, 
+Experience with some of the Apache Big Data stack including Hadoop, Hive, Cassandra, Thrift, Zookeeper}
+
+\vspace{1em}
+
+\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
+
+\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Professional Proficiency}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{Sinhala}}\ \ $\cdotp$\ \ \ Native} 
+
+\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}
