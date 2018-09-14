@@ -61,12 +61,6 @@
 
 \vspace{1em} % Extra white space between the personal information section and goal
 
-\noindent\spacedlowsmallcaps{Interests}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
-
-\Description{I am interested in techniques for monitoring and improving application performance. My specialties are runtime 
-binary instrumentation techniques and performance optimizing runtime adaptive applications. My previous work also included work on
-large scale data processing.}\vspace{2em} % Goal text
-
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
@@ -80,7 +74,7 @@ large scale data processing.}\vspace{2em} % Goal text
 
 %------------------------------------------------
 
-\NewEntry{2013-Current}{Indiana University, Bloomington}
+\NewEntry{2016-Current}{Indiana University, Bloomington}
 
 \Description{\MarginText{PhD \\ Computer Science}\textit{Minor}: Programming Languages \newline
 \textit{Research}: Work on lightweight runtime binary instrumentation techniques.}
@@ -110,7 +104,6 @@ First Class Honors}
 %	WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-
 \noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
 
 \NewEntry{2018 Summer}{Research Intern, \textsc{Science Gateway Research Center}}
@@ -118,13 +111,11 @@ First Class Honors}
 \Description{\MarginText{SGRC, Indiana University}\begin{itemize}
   \item Developed Kisseru, a python library for scripting scientific dataflows. Features a 
 	lightweight embedded DSL which generates and optimizes the data flow graph and run it locally or on a Slurm cluster.
+    {\href{https://github.com/chamibuddhika/kisseru/}{Github}}
 \end{itemize}
 }
 
-
-\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
-
-\NewEntry{2014--Present}{Research Assistant, \textsc{Indiana University}}
+\NewEntry{2015--Present}{Research Assistant, \textsc{Indiana University}}
 
 \Description{\MarginText{Center for Research in Extreme Scale Technologies}\begin{itemize}
   \item Developed Liteprof, a lightweight runtime binary instrumentation framework for x86. 
@@ -134,7 +125,8 @@ of ASTs to yield performance gains. This work was published in ECOOP'17.
   \item Developed a non‐blocking I/O library and related benchmarks on top of Concurrent Cilk work‐stealing
 parallel runtime research prototype. The related work was published in LCPC'15.
   \item Integrated HPX, a C based asynchronous many task runtime as a Haberno CnC backend target. This
-work entailed generating HPX C code from the CnC DSL specification using a Python template library.
+work entailed generating HPX C code from the CnC DSL specification using a Python template library. 
+	{\href{http://homes.soic.indiana.edu/budkahaw/CNC_HPX_PRINTED_SC15.pdf}{Poster}}
 \end{itemize}
 }
 
@@ -158,14 +150,30 @@ Hive to make it multi‐tenant aware.
 \NewEntry{2008, 2009}{Student Developer, \textsc{Google Summer of Code}}
 
 \Description{\MarginText{GSoC} \begin{itemize}
-  \item Apache Tomcat : Improved Tomcat JMX infrastructure making it possible to fully configure a Tomcat instance over JMX.
-  \item Apache ODE : Integrated ODE based BPEL workflow support to BPELUnit. BPELUnit is an Eclipse based unit testing framework for BPEL processes.
+  \item Apache Tomcat : Improved Tomcat JMX infrastructure making it possible to fully configure a Tomcat instance over JMX. {\href{https://blogs.apache.org/tomcat/entry/tomcat_7_trunk_and_jmx}{Blog}}
+  \item Apache ODE : Integrated ODE based BPEL workflow support to BPELUnit. BPELUnit is an Eclipse based unit testing framework for BPEL processes 
+	(tutorials at {\href{http://www.se.uni-hannover.de/pages/en:tutorials_bpelunit_coverage_part_1}{[1]}} \& {\href{http://www.se.uni-hannover.de/pages/en:tutorials_bpelunit_coverage_part_2}{[2]}}).
+
+
 \end{itemize}}
 
 %------------------------------------------------
 
 \vspace{1em} % Extra space between major sections
 
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS 
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Other Projects (Reverse Chronological)}\vspace{1em}
+
+\Description{\MarginText{DSync}A distributed synchronization library based on Apache Zookeeper. {\href{https://chamibuddhika.wordpress.com/2011/08/29/dsync-a-distributed-synchronization-and-coordination-library/}{Blog}}}
+
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
@@ -190,35 +198,6 @@ Timothy Zakian, Abhishek Kulkarni, \textbf{Buddhika Chamith}, Ryan Newton}
 
 \vspace{1em} % Extra space between major sections
 
-%----------------------------------------------------------------------------------------
-%	TEACHING EXPERIENCE 
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Teaching Experience}\vspace{1em}
-
-\Description{\MarginText{2013 Fall}Teaching Assistant for Introduction to Algorithms Graduate course.}
-\Description{\MarginText{2017 Fall}Teaching Assistant for Programming Language Implementation Graduate course.}
-
-%----------------------------------------------------------------------------------------
-%	PROJECTS 
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Projects (Reverse Chronological)}\vspace{1em}
-
-\Description{\MarginText{Kisseru}A Python library for scripting scientific dataflows.
-{\href{https://github.com/chamibuddhika/kisseru/}{Github}}}
-\Description{\MarginText{Liteprof}A lightweight binary instrumentation framework for x86-64.}
-\Description{\MarginText{Haberno CNC/HPX}Integrated HPX distributed task execution enviornment as a CNC backend target. {\href{http://homes.soic.indiana.edu/budkahaw/CNC_HPX_PRINTED_SC15.pdf}{Poster}}}
-\Description{\MarginText{Concurrent Cilk}A research prototype based on Intel Cilk with better support for blocking concurrency by promoting blocking lightweight threads to full OS threads.}
-\Description{\MarginText{WSO2 Data Analytics Server}A data analytics and monitoring solution for enterprise middleware infrastructures. Contributed to the data analytics layer by integrating various big data solutions to the product.}
-\Description{\MarginText{DSync}A distributed synchronization library based on Apache Zookeeper. {\href{https://chamibuddhika.wordpress.com/2011/08/29/dsync-a-distributed-synchronization-and-coordination-library/}{Blog}}}
-\Description{\MarginText{Apache Tomcat}Improving Tomcat JMX infrastructure. {\href{https://blogs.apache.org/tomcat/entry/tomcat_7_trunk_and_jmx}{Blog}}}
-\Description{\MarginText{BPELUnit}BPELUnit is a unit testing framework for BPEL processes. Integrated Apache ODE as a runtime backend for the BPELUnit Eclipse plugin (tutorials at {\href{http://www.se.uni-hannover.de/pages/en:tutorials_bpelunit_coverage_part_1}{[1]}} \& {\href{http://www.se.uni-hannover.de/pages/en:tutorials_bpelunit_coverage_part_2}{[2]}}).}
-
-
-%------------------------------------------------
-
-\vspace{1em} % Extra space between major sections
 
 %----------------------------------------------------------------------------------------
 %	PROFICIENCIES 
