@@ -1,0 +1,114 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[calibri]{mcdowellcv}
+
+% For mathematical symbols
+\usepackage{amsmath}
+
+% Set applicant's personal data for header
+\name{Buddhika Chamith}
+\address{576 East Duane Ave, Sunnyvale \linebreak CA 94085}
+\contacts{(317) 909-1713 \linebreak chamibuddhika@gmail.com \linebreak Github: chamibuddhika}
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+	
+	% Print the content
+	\begin{cvsection}{Employment}
+		\begin{cvsubsection}{Research Intern}{Science Gateways Center}{2018 Summer} 
+			\begin{itemize}
+			  \item Developed Kisseru, a Python library for scripting scientific dataflows. Features a lightweight
+				  embedded DSL which generates and optimizes the data flow graph and run it locally or on Slurm cluster
+				  runtime.
+			\end{itemize}
+		\end{cvsubsection}
+
+
+		\begin{cvsubsection}{Research Assistant}{Indiana University}{2015 -- Present}			
+			\begin{itemize}
+				\item Developed Liteinst , a lightweight runtime binary instrumentation frameworkfor x86. This work was published in PLDI-16 and PLDI-17. It has zero overhead when turned off and does not require expensive traps or stopping the application to inject probes.
+				\item Wrote an algebraic data type serializer as a part of Gibbon research compiler which operates on packed memory representations of ASTs to yield performance gains of 2x in some cases. This work was published in ECOOP-17.
+				\item Developed a nonblocking I/O library and related benchmarks on top of Concurrent Cilk workstealing parallel runtime research prototype. The related work was published in LCPC-15.
+				\item Integrated HPX, a C based asynchronous many task runtime as a Haberno CnC backend target. This work entailed generating HPX C code from the CnC DSL specification using a Python template library.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Senior Software Engineer}{WSO2 Inc}{2013}	
+		\begin{itemize}
+		\item Mentored several new recruits
+		\item Client site work on Americas and Asia
+		\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Software Engineer}{WSO2 Inc}{2010-2013}	
+			\begin{itemize}
+				\item Software developer in Business Activity Monitoring team. Was involved in a complete rewrite of the product in order to make it scalable to handle high throughput data ingestion and big data analytics.
+				\item Implemented a secondary indexing scheme on Apache Cassandra and a high throughput message ingestion service using Apache Thrift.
+				\item Integrated Apache Hive to a cloud based multitenanted environment including source level changes within Hive to make it multitenant aware.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Student Devloper}{Google Summer of Code}{2008, 2009}	
+			\begin{itemize}
+			  \item \textbf{Apache Tomcat} : Improved Tomcat JMX infrastructure making it possible tofully configure a Tomcat instance over JMX.
+			  \item \textbf{Apache ODE} : Integrated ODE based BPEL workflow support to BPELUnit. BPELUnit is an Eclipse based unit testing framework for BPEL processes.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Indiana, IN}{Indiana University}{2013 -- Present}
+			\begin{itemize}
+			    \item PhD in Computer Science -- Ongoing GPA: 3.8 (Estimated completion 2019 Summer)
+				\item MS in Computer Science -- May 2016 GPA: 3.85
+				\item Graduate Coursework -- Advanced Operating Systems, Advanced Database Systems, Programming Language Implementation, Programming Language Foundations, Theory of Computing, Machine Learning
+			\end{itemize}
+		\end{cvsubsection}
+	         \begin{cvsubsection}{Colombo}{University of Moratuwa}{2006 -- 2010}
+			\begin{itemize}
+				\item BSc in Computer Science May 2010 GPA: 3.91 (out of 4.2)
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Extra Projects}
+		\begin{cvsubsection}{}{}{}
+			\begin{itemize}
+				\item \textbf{Scheme Compiler} Wrote a scheme compiler as a part of the programming language implementation module
+				\item \textbf{DSync}  A distributed synchronization library based on Apache Zookeeper.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Languages and Technologies}
+		\begin{cvsubsection}{}{}{}	
+			\begin{itemize}
+				\item C, C++, Java, Python, Rust, x86 Assembly, Racket, Haskell, XML (XSD)
+				\item Binary Instrumentation, Dynamic Binary Translation, SOAP web services, REST, OSGi, Docker, CI (Jenkins), LLVM, Apache Big Data stack including Hadoop, Hive, Cassandra, Thrift, Zookeeper
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+\end{document}
